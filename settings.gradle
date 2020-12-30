@@ -1,0 +1,5 @@
+include ':weight'
+include ':mvp'
+include ':util'
+include ':app'
+rootProject.name = "Knowledge"
