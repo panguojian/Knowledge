@@ -9,14 +9,14 @@ import androidx.fragment.app.FragmentManager
  * Created by pgj on 2020/12/30
  **/
 
-class BottomDialog : BaseBottomDialog() {
+class PBottomDialog : PBaseBottomDialog() {
 
 
     companion object {
         const val KEY_LAYOUT_RES = "bottom_layout_res"
         const val KEY_CANCEL_OUTSIDE = "bottom_cancel_outside"
-        fun build(manager: FragmentManager): BottomDialog {
-            val bottomDialog = BottomDialog()
+        fun build(manager: FragmentManager): PBottomDialog {
+            val bottomDialog = PBottomDialog()
             bottomDialog.setFragmentManager(manager)
             return bottomDialog
         }
@@ -56,22 +56,22 @@ class BottomDialog : BaseBottomDialog() {
         mViewListener?.bindView(v)
     }
 
-    fun setFragmentManager(manager: FragmentManager): BottomDialog? {
+    fun setFragmentManager(manager: FragmentManager): PBottomDialog? {
         mFragmentManager = manager
         return this
     }
 
-    fun setViewListener(listener: ViewListener): BottomDialog? {
+    fun setViewListener(listener: ViewListener): PBottomDialog? {
         mViewListener = listener
         return this
     }
 
-    fun setLayoutRes(@LayoutRes layoutRes: Int): BottomDialog? {
+    fun setLayoutRes(@LayoutRes layoutRes: Int): PBottomDialog? {
         mLayoutRes = layoutRes
         return this
     }
 
-    fun setCancelOutside(cancel: Boolean): BottomDialog? {
+    fun setCancelOutside(cancel: Boolean): PBottomDialog? {
         mIsCancelOutside = cancel
         return this
     }
@@ -80,7 +80,7 @@ class BottomDialog : BaseBottomDialog() {
         fun bindView(v: View?)
     }
 
-    fun show(): BottomDialog? {
+    fun show(): PBottomDialog? {
         show(mFragmentManager!!)
         return this
     }

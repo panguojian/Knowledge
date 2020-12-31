@@ -35,22 +35,22 @@ dependencies {
 
 }
 
-apply plugin: 'com.novoda.bintray-release' // must be applied after your artifact generating plugin (eg. java / com.android.library)
-
-buildscript {
-    repositories {
-        jcenter()
-    }
-    dependencies {
-        classpath 'com.novoda:bintray-release:0.9.1'
-    }
-}
-
-publish {
-    userOrg = 'panguojian'
-    groupId = 'net.isspgj.util'
-    artifactId = 'util-release'
-    publishVersion = '1.0.1'
-    desc = 'tool kit'
-    website = 'https://github.com/panguojian'
-}
+//apply plugin: 'com.novoda.bintray-release' // must be applied after your artifact generating plugin (eg. java / com.android.library)
+//
+//buildscript {
+//    repositories {
+//        jcenter()
+//    }
+//    dependencies {
+//        classpath 'com.novoda:bintray-release:0.9.1'
+//    }
+//}
+//
+//publish {
+//    userOrg = 'panguojian'
+//    groupId = 'net.isspgj.util'
+//    artifactId = 'util-release'
+//    publishVersion = '1.0.2'
+//    desc = 'tool kit'
+//    website = 'https://github.com/panguojian'
+//}

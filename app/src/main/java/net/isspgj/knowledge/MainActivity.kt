@@ -6,10 +6,10 @@ import android.view.View
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 import net.isspgj.util.PTimeUtil
-import net.isspgj.weight.dialog.BottomDialog
+import net.isspgj.weight.dialog.PBottomDialog
 
 class MainActivity : AppCompatActivity() {
-    var bottomDialog: BottomDialog? = null
+    var bottomDialog: PBottomDialog? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -28,8 +28,8 @@ class MainActivity : AppCompatActivity() {
 
     private fun initBottomDialog() {
         bottomDialog =
-            BottomDialog.build(supportFragmentManager).setLayoutRes(R.layout.dialog_me)
-                ?.setViewListener(object : BottomDialog.ViewListener {
+            PBottomDialog.build(supportFragmentManager).setLayoutRes(R.layout.dialog_me)
+                ?.setViewListener(object : PBottomDialog.ViewListener {
                     override fun bindView(v: View?) {
                         v?.setOnClickListener {
                             Toast.makeText(this@MainActivity,PTimeUtil.getCurrent(),Toast.LENGTH_SHORT).show()

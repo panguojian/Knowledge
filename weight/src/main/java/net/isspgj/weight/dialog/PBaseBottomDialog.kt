@@ -9,7 +9,7 @@ import net.isspgj.weight.R
 /**
  * Created by pgj on 2020/12/30
  **/
-abstract class BaseBottomDialog : DialogFragment() {
+abstract class PBaseBottomDialog : DialogFragment() {
 
     abstract fun getLayoutRes():Int
     abstract fun bindView(v:View)
