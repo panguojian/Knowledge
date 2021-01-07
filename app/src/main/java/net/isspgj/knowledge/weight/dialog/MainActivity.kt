@@ -1,11 +1,11 @@
-package net.isspgj.knowledge
+package net.isspgj.knowledge.weight.dialog
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
-import net.isspgj.util.PTimeUtil
+import net.isspgj.knowledge.R
 import net.isspgj.weight.dialog.PBottomDialog
 
 class MainActivity : AppCompatActivity() {
@@ -32,7 +32,6 @@ class MainActivity : AppCompatActivity() {
                 ?.setViewListener(object : PBottomDialog.ViewListener {
                     override fun bindView(v: View?) {
                         v?.setOnClickListener {
-                            Toast.makeText(this@MainActivity,PTimeUtil.getCurrent(),Toast.LENGTH_SHORT).show()
                             bottomDialog?.dismiss()
                         }
                     }
