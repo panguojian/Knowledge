@@ -6,7 +6,7 @@ import android.widget.Toast
 /**
  * Created by pgj on 2020/12/30
  **/
-object ToastUtil {
+object PToastUtil {
     fun showShort(context:Context,msg:String){
         Toast.makeText(context,msg,Toast.LENGTH_SHORT).show()
     }

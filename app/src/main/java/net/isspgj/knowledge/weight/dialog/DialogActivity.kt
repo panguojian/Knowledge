@@ -3,12 +3,11 @@ package net.isspgj.knowledge.weight.dialog
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 import net.isspgj.knowledge.R
 import net.isspgj.weight.dialog.PBottomDialog
 
-class MainActivity : AppCompatActivity() {
+class DialogActivity : AppCompatActivity() {
     var bottomDialog: PBottomDialog? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,8 +38,16 @@ class MainActivity : AppCompatActivity() {
                 })
     }
 
+    /**
+     * 防止内存泄漏
+     */
     private fun clearDialog(){
-        bottomDialog?.dismiss()
+        /**
+         * 屏幕发生旋转 会报错
+         * 所以在使用的时候最好把活动设置为不可旋转
+         * 不要就把这个bottomDialog?.dismiss()注释掉
+         */
+        // bottomDialog?.dismiss()
         bottomDialog = null
     }
 

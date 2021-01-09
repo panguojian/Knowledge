@@ -36,7 +36,7 @@ class PTabItem : FrameLayout {
      *  来实现不同状态显示不同图标
      */
     private lateinit var mIcon: ImageView
-    /**小图标*/
+    /**标题*/
     private lateinit var mTvTitle: TextView
 
     private lateinit var mContext: Context
@@ -44,6 +44,7 @@ class PTabItem : FrameLayout {
     private var mTabPosition = -1
     /**消息未读数*/
     private lateinit var mTvUnreadCount: TextView
+
 
     /**
      *  常用构造函数
