@@ -9,6 +9,9 @@ import android.view.WindowManager
 /**
  * Created by pgj on 2021/1/9
  **/
+/**
+ * 沉浸式状态栏工具类
+ */
 object PStatusUtil {
     fun setTransparentStatus(activity: Activity) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {

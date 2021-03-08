@@ -15,7 +15,6 @@ import androidx.core.app.ShareCompat;
  */
 public class PShareUtil {
     /**
-     *
      * @param activity
      * @param shareText 要分享的内容
      */
@@ -24,7 +23,6 @@ public class PShareUtil {
     }
 
     /**
-     *
      * @param activity
      * @param shareText 要分享的内容
      * @param chooserTitle 选择分享平台面板的标题

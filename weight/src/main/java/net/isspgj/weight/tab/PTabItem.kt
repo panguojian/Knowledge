@@ -36,12 +36,14 @@ class PTabItem : FrameLayout {
      *  来实现不同状态显示不同图标
      */
     private lateinit var mIcon: ImageView
+
     /**标题*/
     private lateinit var mTvTitle: TextView
 
     private lateinit var mContext: Context
 
     private var mTabPosition = -1
+
     /**消息未读数*/
     private lateinit var mTvUnreadCount: TextView
 
@@ -236,16 +238,31 @@ class PTabItem : FrameLayout {
         )).toInt()
     }
 
+    private var normalColor: Int? = null
+    private var selectedColor: Int? = null
+    fun setTextColor(normalColor: Int, selectedColor: Int) {
+        this.normalColor = normalColor
+        this.selectedColor = selectedColor;
+    }
+
     /**
      *  FrameLayout 选中之后要做的事
      *  因为每一子项最外层是FrameLayout包裹
      */
     override fun setSelected(selected: Boolean) {
         super.setSelected(selected)
-        if(selected){
-            mTvTitle.setTextColor(Color.RED)
-        }else{
-            mTvTitle.setTextColor(Color.BLACK)
+        if (selected) {
+            if(selectedColor != null){
+                mTvTitle.setTextColor(selectedColor!!)
+            }else{
+                mTvTitle.setTextColor(Color.RED)
+            }
+        } else {
+            if(normalColor != null){
+                mTvTitle.setTextColor(normalColor!!)
+            }else{
+                mTvTitle.setTextColor(Color.BLACK)
+            }
         }
     }
 }

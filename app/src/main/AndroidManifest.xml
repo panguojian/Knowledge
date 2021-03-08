@@ -11,19 +11,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".share.ShareActivity">
+        <activity android:name=".LauncherActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".network.NetWorkActivity">
+        <activity android:name=".chart.ChartActivity">
 
         </activity>
+        <activity android:name=".share.ShareActivity"></activity>
+        <activity android:name=".network.NetWorkActivity" />
         <activity
             android:name=".util.UtilActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity android:name=".weight.tab.TabActivity" />
         <activity android:name=".weight.dialog.DialogActivity" />
     </application>
