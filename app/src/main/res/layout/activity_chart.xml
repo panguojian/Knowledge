@@ -4,9 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".chart.ChartActivity">
+    tools:context=".chart.ChartActivity"
+    android:orientation="vertical">
     <com.github.mikephil.charting.charts.LineChart
         android:id="@+id/lc_test"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"/>
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/lc_test2"
+        android:layout_weight="1"
         android:layout_width="match_parent"
         android:layout_height="300dp"/>
 </LinearLayout>
